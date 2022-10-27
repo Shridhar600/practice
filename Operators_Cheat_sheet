@@ -1,0 +1,139 @@
+                                        Operators
+
++  |  Addtion 
+-  |  Substraction 
+*  |  Multiplication 
+/  |  Division 
+%  |  Remainder 
+
+-----------------------------------------------
+
+" ++ " = Incrementer 
+" -- " = Decrementer 
+
+* Pre Incrementer (++a): instant increment.
+
+    int a = 10;
+    int b;
+
+    b = ++a;
+    cout <<a<<endl;
+    cout <<b<<endl;
+
+ output: a = 11
+         b = 11
+
+* post Incrementer(a++): current value of a is preserved temporarily. a will increment before next statement is executed.
+
+    int a = 10;
+    int b;
+    b = a++;
+    cout <<a<<endl;
+    cout <<b<<endl;
+
+ output: a = 11
+         b = 10 
+
+-------------------------------------------------------
+
+        RATIONAL OPERATORS 
+
+== gives true value if both operands have equal value.
+!= give true value if operands are not equal.
+>
+<
+>=
+<=
+
+---------------------------------------------------------
+        Logical Operators 
+
+&&  AND gives us true if both operands are true, else false.
+||  OR gives us true if at least one of the operands are true.
+!   NOT gives us the opposite logical value of the operand. true becomes false and false becomes true. 
+
+e.g. - 
+        5 && 1 = true // Both the values are true.
+        5 && 0 = false  // 5 is true value but 0 is false.
+        !5 = 0 (false) // 5 is a true value but NOT operator gives opposite value. 
+
+----------------------------------------------------------
+
+        Bitwise Operator 
+
+AND  =   0101 
+        &0110
+         0100
+
+OR   =   0101
+        &0110
+         0111
+
+XOR  =   0101 // if both the values are same then it gives 0 if, both different gives 1.
+        ^0110
+         0011
+
+Ones Complement 
+     =   ~0101
+        = 1010
+
+Left shift
+     =  4 << 1
+        (0100)
+     =   1000   (8)
+
+Right shift 
+     =   4 >> 1
+         (0100)
+     =    0010  (2)
+
+----------------------------------------------------------------
+
+        Assignment Operator 
+
++= a+=b   ==  a = a+b
+-=
+*=
+/=
+
+-----------------------------------------------------------------
+        Misc. Operators
+
+sizeof() = Returns the size of variable. 
+            int a;
+            sizeof(a) = 4 // size of a integer in bits.
+
+# Condtion? x:y  returns value of x if condition is true or else value of y.
+            int a = 10
+            int b = 5
+            int c = a > b ? a-b : b - a;
+                 condition ? do this if condition true : else do this. 
+
+Cast = coverts one data type to another. 
+            char ch = "a";
+            int(ch) == 97 Ascii value of a.
+
+&  =  Returns the address of a variable. 
+            int a;
+            &(a) // give the memory location of the variable.
+
+*  = Pointer operator 
+
+--------------------------------------------------------------------
+
+Category	        Operator	                        Associativity
+Postfix	            () [] -> . ++ - -	                Left to right
+Unary	            + - ! ~ ++ - - (type)* & sizeof	    Right to left
+Multiplicative  	* / %	                            Left to right
+Additive	        + -	                                Left to right
+Shift	            << >>	                            Left to right
+Relational         	< <= > >=                       	Left to right
+Equality	        == !=	                            Left to right
+Bitwise AND     	&	                                Left to right
+Bitwise XOR     	^	                                Left to right
+Bitwise OR	        |	                                Left to right
+Logical AND	        &&	                                Left to right
+Logical OR	        ||                              	Left to right
+Conditional	        ?:	                                Right to left
+Assignment	        = += -= *= /= %=>>= <<= &= ^= |=	Right to left
+Comma	            ,	                                Left to right
