@@ -1,0 +1,25 @@
+        DECIMAL NUMBER SYSTEM 
+Base  = 10 
+
+149 = 1*100 + 4*10 + 9*1 
+
+---------------------------------------------------------------
+
+        BINARY NUMBER SYSTEM 
+    
+Base = 2 
+
+45 = 1*32 + 0*16 + 1*8 + 1*4 + 0*2 + 1*1
+    BINARY = 101101
+
+----------------------------------------------------------------
+
+        DECIMAL TO BINARY 
+
+Keep dividing the number by 2 which is the base of decimal and store the remainder and then for result read from the last remainder 
+
+----------------------------------------------------------------
+
+        BINARY TO DECIMAL 
+
+E.G.        101101 = 1* 32 + 0* 16 + 1* 8 + 1* 4 + 0* 2 + 1* 1
