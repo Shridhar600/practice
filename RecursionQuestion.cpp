@@ -10,7 +10,8 @@ int power(int n, int p ){
     }
     int prevPower = power(n,p-1);
 
-    return n * prevPower;
+    return n * prevPower;  // ye ha main functioning part jiske bare me hume sochna hai OK.
+    
 }
 
 int main(){
