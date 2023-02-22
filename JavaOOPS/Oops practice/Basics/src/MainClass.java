@@ -20,10 +20,8 @@
         // System.out.println(p3.age);
         // p1.walk();
         // p2.walk(55);
-        // p3.walk();
+        p3.walk(55);
         // System.out.println(Person.count);
-
-        
     }
 }
     class Person {
