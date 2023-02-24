@@ -34,12 +34,6 @@
             // age = newAge;
             System.out.println("1st constructor");
         }
-
-        // public Person(String name){
-        //     this.name = name;
-        //     System.out.println("3rd constructor");
-        // }
-
         // creating a constructor:
         public Person(int age, String newName) {
             //this(); // calling the default constructor. this way won't work.
