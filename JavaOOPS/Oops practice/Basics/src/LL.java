@@ -7,6 +7,8 @@ public class LL {
         list1.addLast(2);
         list1.addLast(1);
 
+        list1.addFirst(10);
+
         list1.printList();
     }
 }
@@ -45,9 +47,22 @@ class LinkedList{
     }
     public void printList(){
         Node current = head;
-        while(current !=null){
+        while(current !=null){ 
             System.out.println(current.data);
             current = current.next;
         }
+    }
+
+    public void addFirst(int data){
+        Node newNode2 = new Node(data);
+        // check
+        if(head == null){
+            head = newNode2;
+            return;
+        }
+        //swapping Head and next of nodes.
+        newNode2.next = head;
+        head = newNode2;
+
     }
 }
