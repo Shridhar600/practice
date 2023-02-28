@@ -1,6 +1,6 @@
 public class LL {
     public static void main(String[] args) {   
-        LinkedList list1 = new LinkedList();
+        LinkedLists list1 = new LinkedLists();
         list1.addLast(5);
         list1.addLast(4);
         list1.addLast(3);
@@ -8,7 +8,12 @@ public class LL {
         list1.addLast(1);
 
         list1.addFirst(10);
+        list1.printList();
 
+        list1.deleteLast();
+        list1.printList();
+        
+        list1.deleteFirst();
         list1.printList();
     }
 }
@@ -24,10 +29,10 @@ class Node{
     }
 }
 
-class LinkedList{
+class LinkedLists{
     Node head;
     // constructor 
-    public LinkedList(){
+    public LinkedLists(){
         this.head = null; // MEANS ABHI KOI VALUE NAHI HAI- KAHLI LINKED LIST HAI.
     }
     public void addLast(int data){
@@ -63,6 +68,33 @@ class LinkedList{
         //swapping Head and next of nodes.
         newNode2.next = head;
         head = newNode2;
+    }
 
+    public void deleteFirst(){
+        if(head == null){ // check for empty list.
+            System.out.print("Empty list.");
+            return;
+        }
+        else{
+            head = head.next;
+        }
+    }
+
+    public void deleteLast(){
+        if(head == null){ // check for empty list.
+            System.out.print("Empty list.");
+            return;
+        }
+        if(head.next == null){ // sirf 1 element hai. 
+            head = null;
+            return;
+        }
+            Node secondLast = head;
+            Node lastNode = head.next;
+            while(lastNode.next != null){
+                lastNode = lastNode.next;
+                secondLast = secondLast.next;
+        }
+        secondLast.next = null;
     }
 }

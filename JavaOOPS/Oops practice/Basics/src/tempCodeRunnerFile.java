@@ -1,4 +1,4 @@
-
-        //swapping Head and next of nodes.
-        newNode2.next = head;
-        head = newNode2;
+        // while (newHead != null) {
+        //     System.out.println(newHead.data + " ");
+        //     newHead = newHead.next;
+        // }
