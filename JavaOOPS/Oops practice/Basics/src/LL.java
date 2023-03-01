@@ -9,12 +9,13 @@ public class LL {
 
         list1.addFirst(10);
         list1.printList();
-
+        System.out.println("---------------------");
         list1.deleteLast();
         list1.printList();
-        
+        System.out.println("---------------------");
         list1.deleteFirst();
         list1.printList();
+        System.out.println("---------------------");
     }
 }
 
@@ -97,4 +98,46 @@ class LinkedLists{
         }
         secondLast.next = null;
     }
-}
+
+    Node ReverseLinked(Node head) {
+        Node curr = head;
+        Node prev = null;
+
+        while (curr != null) {
+            Node temp = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = temp;
+        }
+        return prev;
+    }
+
+    public Node midNode(Node head){
+        Node slow = head;
+        Node fast = head;
+
+        while(fast != null && fast.next != null){
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        return slow;
+    }
+
+    public Boolean palindromeCheck(Node head){
+        if(head == null){
+            return true;
+        }
+        Node mid = midNode(head);
+        Node last = ReverseLinked(mid.next);
+
+        Node current = head;
+        while(last != null){
+            if(last.data != current.data){
+                return false;
+            }
+            last = last.next;
+            current = current.next;
+        }
+        return true;
+    }
+} 
